@@ -39,6 +39,7 @@ int		ft_make_source(t_class *c);
 
 // utils
 char	*ft_strjoin(char const *s1, char const *s2);
+void	skip_space(char *s, int *i);
 
 // error return
 int		error(int err);
