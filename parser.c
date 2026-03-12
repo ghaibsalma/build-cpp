@@ -1,6 +1,6 @@
 #include "builder.h"
 
-void	skip_space(char *s, int  *i) {
+void	skip_space(char *s, int *i) {
 	while(s[*i] && !isspace(s[*i]))
 		*i += 1;
 }
@@ -8,7 +8,6 @@ void	skip_space(char *s, int  *i) {
 int		is_not_name(char *s) {
 	int i = 0;
 
-	
 	skip_space(s, &i);
 	while(s[i]) {
 		if (isspace(s[i]))
