@@ -1,6 +1,6 @@
 SRCS := init.c builder.c parser.c error.c header.c source.c utils.c exit.c
 HDRS := builder.h
-NAME := Builder++
+NAME := build++
 
 all: $(NAME)
 
