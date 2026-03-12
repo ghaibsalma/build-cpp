@@ -16,5 +16,5 @@ Then you could use the command with the name of the class or classes you wanna g
 build++ Dog Cat
 ```
 
-And it will generate the following files (for thsi example):  
+And it will generate the following files (for this example):  
 Dog.cpp Dog.hpp Cat.cpp Cat.hpp
