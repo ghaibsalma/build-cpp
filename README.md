@@ -1,6 +1,8 @@
 # A Simple C++ class builder
 
-As the title suggests, this program is a simple code generator for c++ classes with orthodox canonical form (42/1337 style).
+This program is a simple code generator for c++ classes (*.cpp/ *.hpp) with orthodox canonical form (42/1337 style).
+
+*Because writing classes, constructors, copy constructor, copy assignment operator annnd and a destructor is too tedious.*
 
 To use you can clone the repo, make and copy the executable to bin
 ```
@@ -14,5 +16,5 @@ Then you could use the command with the name of the class or classes you wanna g
 build++ Dog Cat
 ```
 
-And it will generate the following files (for thsi example):
+And it will generate the following files (for thsi example):  
 Dog.cpp Dog.hpp Cat.cpp Cat.hpp
