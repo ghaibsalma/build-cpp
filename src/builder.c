@@ -1,6 +1,6 @@
 #include "builder.h"
 
-void	ft_make_files(t_build *to_build, int size) {
+void	ft_make_files(t_build *to_build) {
 	int	i = 0;
 
 	while (to_build->classes[i]) {

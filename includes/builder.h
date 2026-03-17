@@ -44,7 +44,7 @@ int		parser(int ac, char **av, t_build *to_build);
 
 // file ft_makers
 int		ft_make_header(t_build *to_build, int i);
-void	ft_make_files(t_build *to_build, int size);
+void	ft_make_files(t_build *to_build);
 int		ft_make_source(t_build *to_build, int i);
 
 // utils

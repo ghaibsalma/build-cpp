@@ -1,11 +1,12 @@
-SRCS := init.c builder.c parser.c error.c header.c source.c utils.c exit.c
-HDRS := builder.h
+SRCS := src/init.c src/builder.c src/parser.c src/error.c src/header.c src/source.c src/utils.c src/exit.c
+HDRS := includes/builder.h
 NAME := build++
+FLAGS := -Wall -Wextra -Werror -I./includes
 
 all: $(NAME)
 
 $(NAME): $(SRCS) $(HDRS)
-	cc $(SRCS) -o $(NAME) 
+	cc $(FLAGS) $(SRCS) -o $(NAME) 
 
 fclean:
 	rm -rf $(NAME)

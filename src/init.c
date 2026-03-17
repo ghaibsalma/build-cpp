@@ -9,6 +9,6 @@ int main(int ac, char *av[])
 	bzero(&to_build, sizeof(t_build));
 	if (parser(ac - 1, &av[1], &to_build))
 		return (error(SYNTAX_ERR));
-	ft_make_files(&to_build, ac - 1);
+	ft_make_files(&to_build);
 	get_out(to_build.classes);
 }
