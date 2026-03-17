@@ -14,6 +14,11 @@ enum {
 	SYNTAX_ERR
 };
 
+enum {
+	HELP_FLAG = 1,
+	ORTHDX_FLAG,
+	MIN_FLAG
+};
 
 // plan to add attributes to the builder
 typedef struct	s_attr {
@@ -32,7 +37,7 @@ typedef struct	s_class {
 
 typedef struct	s_build {
 	t_class		**classes;
-	char		*flags;
+	char		flags[2];
 }				t_build;
 
 int		parser(int ac, char **av, t_build *to_build);
