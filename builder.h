@@ -30,12 +30,17 @@ typedef struct	s_class {
 	// t_attr		*attr;
 }				t_class;
 
-t_class	**parser(int ac, char **av);
+typedef struct	s_build {
+	t_class		**classes;
+	char		*flags;
+}				t_build;
+
+int		parser(int ac, char **av, t_build *to_build);
 
 // file ft_makers
-int		ft_make_header(t_class *c);
-void	ft_make_files(t_class **c, int size);
-int		ft_make_source(t_class *c);
+int		ft_make_header(t_build *to_build, int i);
+void	ft_make_files(t_build *to_build, int size);
+int		ft_make_source(t_build *to_build, int i);
 
 // utils
 char	*ft_strjoin(char const *s1, char const *s2);

@@ -30,7 +30,7 @@ int		fill(int i, t_class **c, char** av) {
 	return (1);
 }
 
-void	*free_classes(t_class **c, int id) {
+int		free_classes(t_class **c, int id) {
 	int		i;
 
 	i = 0;
@@ -40,19 +40,18 @@ void	*free_classes(t_class **c, int id) {
 		i++;
 	}
 	free(c);
-	return (NULL);
+	return (1);
 }
 
-t_class	**parser(int ac, char **av) {
-	t_class	**classes;
+int		parser(int ac, char **av, t_build *to_build) {
 	int		i = 0;
 
-	classes = malloc(sizeof(t_class*) * (ac + 1));
+	to_build->classes = malloc(sizeof(t_class*) * (ac + 1));
 	while (i < ac) {
-		if (!fill(i, classes, av))
-			return (free_classes(classes, i));
+		if (!fill(i, to_build->classes, av))
+			return (free_classes(to_build->classes, i));
 		i++;
 	}
-	classes[i] = NULL;
-	return (classes);
+	to_build->classes[i] = NULL;
+	return (0);
 }

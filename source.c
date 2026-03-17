@@ -1,9 +1,11 @@
 #include "builder.h"
 
-int		ft_make_source(t_class *c) {
+int		ft_make_source(t_build *to_build, int i) {
+	t_class	*c;
 	char	*s;
 	int		fd;
 
+	c = to_build->classes[i];
 	s = ft_strjoin(c->name, ".cpp");
 	fd = open(s, O_CREAT | O_RDWR, 0777);
 	free(s);

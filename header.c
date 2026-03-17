@@ -12,11 +12,13 @@ char *str_toupper(char *c) {
 	return (s);
 }
 
-int		ft_make_header(t_class *c) {
+int		ft_make_header(t_build *to_build, int i) {
+	t_class	*c;
 	char	*s;
 	char	*t;
 	int		fd;
 
+	c = to_build->classes[i];
 	s = ft_strjoin(c->name, ".hpp");
 	fd = open(s, O_CREAT | O_RDWR, 0777);
 	free(s);
